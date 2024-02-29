@@ -1,35 +1,4 @@
-# Reactfolio V1.2 👩🏽‍🚀
-
-Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. It provides an easy way for developers, designers, and creatives to showcase their work, skills, and achievements in a professiona and visually appealing way. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
-
-<center>
-<img src="https://i.imgur.com/ZWPO61A.jpeg" alt="Reactfolio" />
-</center>
-
-Live demo here: <a href="https://reactfolio.Bonnie.dev/" target="_blank">reactfolio.Bonnie.dev</a>
-<br/>
-Readme here: <a href="https://Bonnie.dev/portfolio/reactfolio/" target="_blank">Bonnie.dev/portfolio/reactfolio/</a>
-
--   [Features](#-features)
--   [Getting started](#-getting-started)
--   [Installation and Setup Instructions](#-installation-and-setup-instructions)
--   [Folder structure](#-folder-structure)
--   [Configurations](#-configurations)
--   [Google Analytics](#-google-analytics)
--   [Building the React App](#-building-the-react-app)
--   [FAQ](#-faq)
--   [Contribution](#-contribution)
-
-## 📙 Features
-
--   📖 Multi-Page Layout
-    -   Home
-    -   About
-    -   Projects
-    -   Articles
-    -   Contact
--   📱 Fully Responsive
--   🛠 Easy configurations
+# Reactfolio compatible version with Git Pages
 
 ## 📚 Getting started
 
@@ -37,13 +6,35 @@ Clone down this repository. You will need `NodeJS` and `git` installed globally 
 
 ## 🛠 Installation and Setup Instructions
 
-1. Installation: `npm install`
+1. Go to the repo root directory `cd reactfolio`
 
-2. Run the project: `npm start`
+2. Installation: `npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
+3. Deploy the project: `npm run deploy`
+    - might need to run the following command for the first time and run again, if an error occurs.
+      ```
+      rm -rf node_modules/.cache/gh-pages
+      npm run deploy
+      ```
+      
+4. Configure Git Pages
+    - Select `gh-pages` as branch and Save
+      
+      ![image](https://github.com/shanefujs/reactfolio/assets/75388289/3f928df6-5bdd-4a7e-80d0-41a0b967fd5c)
+
+  
+5.  Set up git hook
+
+    - edit hooks/pre-push with vim: `vim .git/hooks/pre-push`
+    - add the following line, and save (`esc` > `:wq` > `enter`).
+        ```
+        npm run deploy
+        ```
+    - make pre-push executable: `chmod +x .git/hooks/pre-push`
+  
+  
+5.  Done 🚀. Every time you push to master, a workflow will be triggered to deploy your page to https://<user_name>.github.io/reactfolio/
+
 
 ## 📁 Folder structure
 
@@ -170,23 +161,6 @@ How to find the Google Analytics 4 MEASUREMENT ID ?
 
 [https://support.google.com/analytics/answer/9539598?hl=en](https://support.google.com/analytics/answer/9539598?hl=en)
 
-## 🚀 Building the React App
-
-To build the React app, you can use the `npm run build` command. This will create a production-ready build of your app in the `build/` directory.
-
-Here are the steps to follow:
-
-1. Open a terminal window and navigate to the root directory of your React app.
-2. Run the `npm run build` command to create a production build of your app. This will generate a static bundle of your app in the `build/` directory.
-3. Copy the contents of the `build/` directory to your server's public directory. You can do this using an FTP client or by running a command like `scp` to transfer the files to your server. Make sure to replace `example.com` and `/var/www/html` with your server's domain name and public directory, respectively:
-
-    ```bash
-    scp -r build/* user@example.com:/var/www/html
-    ```
-
-4. Your portfolio app should now be accessible from your server's domain name. You can verify this by opening a web browser and navigating to http://example.com (replace example.com with your server's domain name).
-
-That's it! Your React portfolio app should now be up and running on your server. Note that you may need to configure your server's web server (e.g., Apache or Nginx) to serve the index.html file in the build/ directory as the default page for your domain.
 
 ## 🤔 FAQ
 
