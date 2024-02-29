@@ -25,11 +25,12 @@ Clone down this repository. You will need `NodeJS` and `git` installed globally 
   
 5.  Set up git hook
 
-    - edit hooks/pre-push with vim: `vim .git/hooks/pre-push`
-    - add the following line, and save (`esc` > `:wq` > `enter`).
+    - Edit hooks/pre-push with vim: `vim .git/hooks/pre-push`
+    - Add cmmand: press `i` to enter edit mode, add the following line.
         ```
         npm run deploy
         ```
+    - Save (`esc` > `:wq` > `enter`)
     - make pre-push executable: `chmod +x .git/hooks/pre-push`
   
   
