@@ -1,11 +1,11 @@
 {
-	"homepage": "https://shanefujs.github.io/reactfolio/",
+	"homepage": "https://bonni3lee.github.io/reactfolio/",
 	"name": "reactfolio",
 	"version": "1.1.0",
 	"description": "Personal portfolio template built using Reactjs",
 	"author": {
-		"name": "Jyun-Sheng Fu",
-		"email": "shanefujs@gmail.com",
+		"name": "Bonnie Lee",
+		"email": "oneline27@gmail.com",
 		"url": "."
 	},
 	"license": "MIT",
