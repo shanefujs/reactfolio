@@ -33,7 +33,7 @@ Clone down this repository. You will need `NodeJS` and `git` installed globally 
     - make pre-push executable: `chmod +x .git/hooks/pre-push`
   
   
-5.  Done 🚀. Every time you push to master, a workflow will be triggered to deploy your page to https://<user_name>.github.io/reactfolio/
+5.  Done 🚀. Every time you push a change to master, a workflow will be triggered to deploy your page to https://<user_name>.github.io/reactfolio/
 
 
 ## 📁 Folder structure
